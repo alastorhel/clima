@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clima.MainPage"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="#332b45">
+
+    <Grid>
+
+            <Image x:Name="imgBackground"
+                    Aspect="AspectFill"/>
+
+            <Frame x:Name="graus"
+                Margin="10,90,10,460"
+                Opacity="0.5"
+                BackgroundColor="#e2dee3">
+
+                <Grid>
+                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                 </Grid.RowDefinitions>
+
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Label Text="24ºC"
+                         FontFamily="daddy"
+                         x:Name="LabelGraus"
+                         VerticalTextAlignment="Center"
+                         Grid.Column="0"
+                         FontSize="50"
+                         Grid.RowSpan="2"/>
+
+                  <Label Text="Nublado"
+                         Grid.Column="1"
+                         x:Name="LabelClima"
+                          FontFamily="daddy"
+                          FontSize="18"
+                         Grid.Row="0"/>
+
+                  <Label Text="Apucarana, PR"
+                         Grid.Column="1"
+                         x:Name="LabelCidade"
+                          FontFamily="daddy"
+                          FontSize="18"
+                         Grid.Row="1"/>
+                 </Grid>
+                </Frame>
+
+            <Frame x:Name="chuva"
+                Margin="10,250,185,362"
+                Opacity="0.5"
+                BackgroundColor="#e2dee3">
+
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                 </Grid.RowDefinitions>
+
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Label Text="Chuva:"
+                        Grid.Column="0"
+                         FontFamily="daddy"
+                         VerticalOptions="End"
+                        Grid.Row="0"/>
+
+                   <Label Text="Humidade:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                          VerticalOptions="End"
+                         Grid.Row="1"/>
+
+                    <Label Text="Nublado:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                          VerticalOptions="End"
+                         Grid.Row="2"/>
+
+                          <Label Text="69"
+                         Grid.Column="1"
+                          FontFamily="daddy"
+                         x:Name="LabelHumidade"
+                         VerticalOptions="End"
+                         Grid.Row="1"/>
+
+                        <Label Text="24"
+                         Grid.Column="1"
+                         VerticalOptions="End"
+                          FontFamily="daddy"
+                           x:Name="LabelChuva"
+                         Grid.Row="0"/>
+
+                         <Label Text="24"
+                         Grid.Column="1"
+                          FontFamily="daddy"
+                          VerticalOptions="End"
+                           x:Name="LabelNublado"
+                         Grid.Row="2"/>
+
+                        
+                </Grid>
+               </Frame>
+
+            <Frame x:Name="vento"
+                Margin="185,250,10,362"
+                Opacity="0.5"
+                BackgroundColor="#e2dee3">
+                <Grid>
+                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                 </Grid.RowDefinitions>
+
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+                <Label Text="Vento"
+                       Grid.ColumnSpan="3"
+                          FontFamily="daddy"
+                          HorizontalTextAlignment="Center"
+                         Grid.Row="0"/>
+
+                     <Label Text="Forca:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                         Grid.Row="1"/>
+
+                    <Label Text="Direcao:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                         Grid.Row="2"/>
+
+                    <Label Text="69"
+                         Grid.Column="1"
+                          FontFamily="daddy"
+                           x:Name="LabelForça"
+                         Grid.Row="1"/>
+
+                        <Label Text="24"
+                         Grid.Column="1"
+                          FontFamily="daddy"
+                           x:Name="LabelDireção"
+                         Grid.Row="2"/>
+
+                         <Label Text="S"
+                         Grid.Column="2"
+                          FontFamily="daddy"
+                           x:Name="LabelCardinal"
+                         Grid.Row="2"/>
+
+                
+                </Grid>
+            </Frame>
+
+            <Frame x:Name="sol"
+                Margin="10,345,185,272"
+                Opacity="0.5"
+                BackgroundColor="#e2dee3">
+
+                                <Grid>
+                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                 </Grid.RowDefinitions>
+
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                  </Grid.ColumnDefinitions>
+
+                <Label Text="Sol"
+                       Grid.ColumnSpan="2"
+                          FontFamily="daddy"
+                          HorizontalTextAlignment="Center"
+                         Grid.Row="0"/>
+
+                     <Label Text="Amanhecer:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                         Grid.Row="1"/>
+
+                    <Label Text="Anoitecer:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                         Grid.Row="2"/>
+
+                    <Label Text="06:1"
+                         Grid.Column="1"
+                          FontFamily="daddy"
+                           x:Name="LabelAmanhecer"
+                         Grid.Row="1"/>
+
+                        <Label Text="18:2"
+                         Grid.Column="1"
+                          x:Name="LabelAnoitecer"
+                          FontFamily="daddy"
+                         Grid.Row="2"/>
+
+                
+                </Grid>
+            </Frame>
+
+            <Frame x:Name="lua"
+                Margin="185,345,10,272"
+                Opacity="0.5"
+                BackgroundColor="#e2dee3">
+                 <Grid>
+                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                 </Grid.RowDefinitions>
+
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                  </Grid.ColumnDefinitions>
+
+                <Label Text="Lua"
+                       Grid.ColumnSpan="2"
+                          FontFamily="daddy"
+                          HorizontalTextAlignment="Center"
+                         Grid.Row="0"/>
+
+                     <Label Text="Fase:"
+                         Grid.Column="0"
+                          FontFamily="daddy"
+                         Grid.Row="1"/>
+
+                    <Label Text="Cheia"
+                         Grid.Column="1"
+                         x:Name="LabelLua"
+                          FontFamily="daddy"
+                         Grid.Row="1"/>
+
+
+                
+                </Grid>
+            </Frame>
+
+            <Frame CornerRadius="30"
+                Margin="10,0,10,20"
+                BorderColor="Transparent"
+                BackgroundColor="#99FFFFFF"
+                HeightRequest="200"
+                VerticalOptions="End">
+              <CollectionView x:Name="ListaForecast">
+               <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                  ItemSpacing="10"/>
+               </CollectionView.ItemsLayout>
+               <CollectionView.ItemTemplate>
+                <DataTemplate>
+                  <Frame BackgroundColor="#FFF"
+                          BorderColor="#FFF"
+                          WidthRequest="200"
+                          CornerRadius="20">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="*"/>
+                      </Grid.RowDefinitions>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                      </Grid.ColumnDefinitions>
+                      <Label Text="{Binding date}"
+                              FontSize="12"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="0"
+                              Grid.ColumnSpan="2"/>
+                      <Label Text="{Binding weekday}"
+                              FontSize="16"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="1"
+                              Grid.ColumnSpan="2"/>
+
+                      <Label Text="Min:"
+                              FontSize="12"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="2"
+                              Grid.ColumnSpan="0"/>
+                      <Label Text="Max:"
+                              FontSize="12"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="3"
+                              Grid.ColumnSpan="0"/>
+                      <Label Text="{Binding min, StringFormat='{0}º C'}"
+                              FontSize="14"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="2"
+                              Grid.ColumnSpan="1"/>
+                      <Label Text="{Binding max, StringFormat='{0}º C'}"
+                              FontSize="14"
+                              TextColor="#000"
+                              HorizontalOptions="Center"
+                              Grid.Row="3"
+                              Grid.ColumnSpan="1"/>
+
+                      <Image Source="{Binding condition}"
+                              Aspect="Fill"
+                              HeightRequest="50"
+                              WidthRequest="50"
+                              Grid.Row="4"
+                              Grid.ColumnSpan="2"/>
+                  </Grid>
+                </Frame>
+              </DataTemplate>
+            </CollectionView.ItemTemplate>
+            </CollectionView>
+            </Frame>
+            <Label Text="ºC"
+                  FontFamily="daddy"
+                  FontSize="50"
+                  Margin="83,128,0,0"
+                  Opacity="0.6"/>
+
+
+    </Grid>
+
+</ContentPage>
